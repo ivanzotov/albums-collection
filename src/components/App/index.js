@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { pick } from 'ramda'
 import { Wrap } from './styles'
+import { Loader, AlbumItem } from '..'
 import actions from '../../actions'
 
-const connector = connect(pick(['albums']))
+const connector = connect(pick(['albums', 'loaders']))
 
 class App extends Component {
   componentDidMount() {
@@ -12,9 +13,10 @@ class App extends Component {
   }
 
   render() {
-    const { albums } = this.props
+    const { albums, loaders } = this.props
 
-    return <Wrap>{albums.map(album => <div key={album.id}>{album.title}</div>)}</Wrap>
+    if (loaders.albums) return <Loader />
+    return <Wrap>{albums.map(album => <AlbumItem key={album.id} album={album} />)}</Wrap>
   }
 }
 
