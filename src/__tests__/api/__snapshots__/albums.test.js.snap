@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`API Albums should search albums 1`] = `
+Object {
+  "count": 14,
+  "created": "2018-06-05T10:18:45.366Z",
+  "offset": 0,
+  "release-groups": Array [
+    Object {
+      "artist-credit": Array [
+        Object {
+          "artist": Object {
+            "aliases": Array [
+              Object {
+                "begin-date": null,
+                "end-date": null,
+                "locale": null,
+                "name": "50 Cents",
+                "primary": null,
+                "sort-name": "50 Cents",
+                "type": null,
+              },
+              Object {
+                "begin-date": null,
+                "end-date": null,
+                "locale": null,
+                "name": "Curtis Jackson",
+                "primary": null,
+                "sort-name": "Jackson, Curtis",
+                "type": null,
+              },
+              Object {
+                "begin-date": null,
+                "end-date": null,
+                "locale": null,
+                "name": "Curtis James Jackson III",
+                "primary": null,
+                "sort-name": "Jackson, Curtis James, III",
+                "type": "Legal name",
+              },
+            ],
+            "id": "8e68819d-71be-4e7d-b41d-f1df81b01d3f",
+            "name": "50 Cent",
+            "sort-name": "50 Cent",
+          },
+        },
+      ],
+      "count": 1,
+      "id": "c9fdb94c-4975-4ed6-a96f-ef6d80bb7738",
+      "primary-type": "Album",
+      "releases": Array [
+        Object {
+          "id": "2ec84eb6-ab92-4ac3-9720-32ad84c34f11",
+          "status": "Bootleg",
+          "title": "The Lost Tape",
+        },
+      ],
+      "score": "100",
+      "secondary-types": Array [
+        "Mixtape/Street",
+      ],
+      "title": "The Lost Tape",
+    },
+    Object {
+      "artist-credit": Array [
+        Object {
+          "artist": Object {
+            "aliases": Array [
+              Object {
+                "begin-date": null,
+                "end-date": null,
+                "locale": null,
+                "name": "Mark Council",
+                "primary": null,
+                "sort-name": "Mark Council",
+                "type": "Search hint",
+              },
+              Object {
+                "begin-date": null,
+                "end-date": null,
+                "locale": null,
+                "name": "Mark Hibbett",
+                "primary": null,
+                "sort-name": "Mark Hibbett",
+                "type": null,
+              },
+              Object {
+                "begin-date": null,
+                "end-date": null,
+                "locale": null,
+                "name": "Mark J. Hibbett",
+                "primary": null,
+                "sort-name": "Mark J. Hibbett",
+                "type": null,
+              },
+              Object {
+                "begin-date": null,
+                "end-date": null,
+                "locale": null,
+                "name": "M.J. Hibbert",
+                "primary": null,
+                "sort-name": "M.J. Hibbert",
+                "type": null,
+              },
+              Object {
+                "begin-date": null,
+                "end-date": null,
+                "locale": null,
+                "name": "MJ Hibbert",
+                "primary": null,
+                "sort-name": "MJ Hibbert",
+                "type": null,
+              },
+              Object {
+                "begin-date": null,
+                "end-date": null,
+                "locale": null,
+                "name": "M J Hibbett",
+                "primary": null,
+                "sort-name": "M J Hibbett",
+                "type": null,
+              },
+              Object {
+                "begin-date": null,
+                "end-date": null,
+                "locale": null,
+                "name": "M.J. Hibbett",
+                "primary": null,
+                "sort-name": "M.J. Hibbett",
+                "type": null,
+              },
+            ],
+            "id": "d4660be4-dfa6-42ac-aa39-11ca61e6dbfa",
+            "name": "MJ Hibbett",
+            "sort-name": "Hibbett, MJ",
+          },
+        },
+      ],
+      "count": 1,
+      "id": "63912f82-5da4-418e-b69f-ecff3f926614",
+      "primary-type": "Album",
+      "releases": Array [
+        Object {
+          "id": "0a701c88-c6d0-46e5-b12c-6c4027291cf0",
+          "status": "Official",
+          "title": "The Lost Tape",
+        },
+      ],
+      "score": "100",
+      "secondary-types": Array [
+        "Compilation",
+      ],
+      "title": "The Lost Tape",
+    },
+  ],
+}
+`;
