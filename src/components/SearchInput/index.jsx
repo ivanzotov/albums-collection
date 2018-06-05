@@ -3,7 +3,7 @@ import { Input } from '..'
 import { Wrap, Empty, Item, Dropdown } from './styles'
 
 const EmptyComponent = () => (
-  <Empty>Не найдено</Empty>
+  <Empty>Not found</Empty>
 )
 
 class ItemsComponent extends PureComponent {

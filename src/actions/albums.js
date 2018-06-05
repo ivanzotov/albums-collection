@@ -1,6 +1,13 @@
 import api from '../api'
 import { dispatch } from '../lib/store'
 
+export const load = async () => {
+  const myAlbums = localStorage.getItem('myAlbums')
+  if (myAlbums) {
+    dispatch({ type: 'MY_ALBUMS_LOAD', payload: JSON.parse(myAlbums) })
+  }
+}
+
 export const search = async (params = {}) => {
   dispatch({ type: 'GET_ALBUMS_REQ' })
 

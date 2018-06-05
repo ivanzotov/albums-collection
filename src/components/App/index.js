@@ -3,13 +3,18 @@ import { connect } from 'react-redux'
 import { pick, values } from 'ramda'
 import { Wrap } from './styles'
 import actions from '../../actions'
-import { Loader, SearchInput, Item } from '..'
+import { Loader, SearchInput, MyAlbumItem } from '..'
 
 const connector = connect(pick(['albums', 'myAlbums', 'loaders']))
 
 class App extends Component {
-  componentDidMount() {
-    actions.albums.search({ query: 'lost tape' })
+  componentWillMount() {
+    actions.albums.load()
+  }
+
+  onSearchInputChange = query => {
+    // TODO: debounce and request overlapping
+    actions.albums.search({ query })
   }
 
   onAlbumClick = album => {
@@ -26,7 +31,6 @@ class App extends Component {
     const { loaders, albums } = this.props
 
     if (loaders.albums) return <Loader />
-
     if (albums.length === 0) return <SearchInput.Empty />
 
     return (
@@ -37,7 +41,7 @@ class App extends Component {
             highlight={album.isSaved()}
             onMouseDown={() => this.onAlbumClick(album)}
           >
-            {album.name} {album.isSaved() ? 'true' : 'false'}
+            {album.name}
           </SearchInput.Item>
         ))}
       </SearchInput.Items>
@@ -49,8 +53,10 @@ class App extends Component {
 
     return (
       <Wrap>
-        <SearchInput>{this.renderAlbumsDropdown()}</SearchInput>
-        {values(myAlbums).map(it => <Item>{it.name}</Item>)}
+        <SearchInput onChangeText={this.onSearchInputChange}>
+          {this.renderAlbumsDropdown()}
+        </SearchInput>
+        {values(myAlbums).map(it => <MyAlbumItem key={it.id} album={it} />)}
       </Wrap>
     )
   }

@@ -42,10 +42,7 @@ export default class Input extends PureComponent {
       'hide',
       'value',
     ])(this.props)
-    let { label, error, dropdown } = this.props
-
-    if (typeof label === 'function') label = label()
-    if (typeof error === 'function') error = error()
+    let { dropdown } = this.props
 
     return (
       <Wrap>
