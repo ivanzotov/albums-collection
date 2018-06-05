@@ -1,5 +1,7 @@
 import App from './App'
 import Loader from './Loader'
-import AlbumItem from './AlbumItem'
+import Item from './Item'
+import Input from './Input'
+import SearchInput from './SearchInput'
 
-export { App, Loader, AlbumItem }
+export { App, Loader, Item, Input, SearchInput }
